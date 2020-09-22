@@ -100,8 +100,13 @@ article {
 
 .article-image {
     margin: 10px auto;
-    display: block;
+    /* display: block; */
     width: 90%;
+    height:135px;
+    display:grid;
+    place-items:center;
+    /* background:rgb(190, 190, 245)190, 190, 245); */
+    /* vertical-align: m; */
 }
 
 .article-image img {

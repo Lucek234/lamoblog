@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        #obrazek {
+            background-image: url('./ogorek.jpg');
+        }
+
+        .paragraphs {
+            border: 1px solid #000000;
+            min-height: 100px;
+            padding: 20px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <article>
+        <div class="paragraphs">
+            <p> Na dno garnka włóż przyprawy. </p>
+
+            <p> Kwaszeniaki dokładnie umyj, ciasno ułóż pionowo w naczyniu, tak by z czasem nie wypłynęły.</p>
+
+            <p> Wodę nalej do dużego naczynia, posól i odstaw, aby uwolnić z niej tlen i ewentualnie chlor. Jeśli nie
+                masz
+                dostępu do wody wolnej od bakterii, wodę zagotuj, całkowicie ostudź, osól i dopiero zalej ogórki.</p>
+
+            <p> Na ogórkach połóż obciążony talerzyk. Garnek przykryj ściereczką i postaw na talerzu.</p>
+
+            <p> Ogórki pozostaw w temperaturze pokojowej (18-25°C) na 1-3 dni, potem przenieś w chłodne miejsce. Uwaga:
+                jeśli zależy ci, by mieć ogórki małosolne, możesz zakończyć kiszenie już po 2-3 dniach.</p>
+        </div>
+        <div>
+            <button id='back-button'>Poprzedni</button>
+            <button id='next-button'>Następny</button>
+        </div>
+    </article>
+    <script>
+
+        var x = -1;
+
+        function back() {
+            $('p').hide()
+            x -= 1
+            $("p").eq(x).show()
+            
+        }
+
+
+        function next() {
+            $('p').hide()
+            x += 1;
+        
+            $('p').eq(x).show();
+        }   
+
+        $('p').hide();
+        $('#next-button').click(next)
+        $('#back-button').click(back)
+
+
+    </script>
+</body>
+
+</html>
